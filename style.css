@@ -1,0 +1,266 @@
+@charset "utf-8";
+/* CSS reset */
+html {
+	-webkit-text-size-adjust: 100%; /*可以调整字体大小小于12px*/
+	height:100%;
+  overflow-x:hidden;
+  background: #f5f5f5;
+	color: #444;
+	font: 14px/24px Helvetica,Arial,sans-serif !important;
+}
+body {
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+    position:relative; z-index:0; width:100%; max-width:640px; min-height:100%; margin:0 auto; overflow-x:hidden; box-shadow:0 0 10px rgba(0,0,0,0.3);}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button { margin:0; padding:0; outline:none;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section { display:block; margin:0; padding:0;}
+audio,canvas,video,progress { display:inline-block; vertical-align:baseline;}
+input,button,select,textarea { font-size:100%; color:#636363; outline:none; -webkit-appearance:none; border-radius:0;}
+textarea { resize:none;}
+table { border-collapse:collapse; border-spacing:0;}
+fieldset,img { border:0;}
+iframe { display:block;}
+abbr,acronym { border:0; font-variant:normal;}
+del { text-decoration:line-through;}
+address,caption,cite,code,dfn,em,strong,th,var { font-style:normal; font-weight:normal;}
+ol,ul { list-style:none;}
+caption,th { text-align:left;}
+h1,h2,h3,h4,h5,h6 { font-size:100%; font-weight:normal;}
+q:before,q:after { content:"";}
+sub,sup { font-size:75%; line-height:0; position:relative; vertical-align:baseline;}
+sup { top:-0.5em;}
+sub { bottom:-0.25em;}
+a { text-decoration:none; color:#8dabbb;}
+a:active,a:focus { outline:none; color:#8dabbb;}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { color:#9ea3ab !important; word-wrap:break-word; word-break:break-all;}
+input:-moz-placeholder, textarea:-moz-placeholder { color:#9ea3ab !important; word-wrap:break-word; word-break:break-all;}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder { color:#9ea3ab !important; word-wrap:break-word; word-break:break-all;}
+
+/*position*/
+.tl {text-align:left;}
+.tc {text-align:center;}
+.tr {text-align:right;}
+.bc {margin-left:auto;margin-right:auto;}
+.fl {float:left;display:inline;}
+.fr {float:right;display:inline;}
+.cb {clear:both;}
+.clear {clear:both;height:0;overflow:hidden;}
+.cl {clear:left;}
+.cr {clear:right;}
+.clearfix:after {visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0;}
+.clearfix {zoom:1;}
+.vm {vertical-align:middle;}
+.pr {position:relative;}
+.pa {position:absolute;}
+.zoom {zoom:1;}
+.hidden {visibility:hidden;}
+.visible {visibility:visible;}
+.none {display:none;}
+.block {display:block;}
+.inline {display:inline;}
+
+.digit-clock{
+	height: 150px;
+	background-color: #ff7466;
+	color: #fff;
+}
+.digit-clock h4{
+	font-size: 20px;
+	text-align: center;
+	line-height: 22px;
+}
+.digit-clock .h4-box{
+	padding: 19px 0;
+}
+.digit-clock .date{
+	height: 40px;
+	width: 198px;
+	margin: 0px auto;
+	position: relative;
+}
+.digit-clock .date .text{
+	position: absolute;
+	left: 0;
+	top:9px;
+	margin-left: -45px;
+}
+.digit-clock ul{
+	height: 36px;
+}
+.digit-clock li{
+	height: 36px;
+	float: left;
+}
+.digit-clock li.separator{
+	width: 4px;
+	position: relative;
+	margin: 0 3px 0 -2px;
+}
+.digit-clock li.separator:before{
+	width: 4px;
+	height: 4px;
+	background-color: #fff;
+	position: absolute;
+	top: 9px;
+	left: 0;
+	content: "";
+}
+.digit-clock li.separator:after{
+	width: 4px;
+	height: 4px;
+	background-color: #fff;
+	position: absolute;
+	top: 21px;
+	left: 0;
+	content: "";
+}
+.digit-clock li.digit{
+	position: relative;
+	height: 36px;
+	margin-right: 5px;
+	width: 26px;
+	font-size: 30px;
+	text-align: center;
+}
+.digit-clock .bg{
+	width: 26px;
+	height: 36px;
+	border-radius: 6px;
+	background-color: #fff;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+.digit-clock li.digit:before{
+	position: absolute;
+	top:17px;
+	left: 1px;
+	width: 24px;
+	height: 1px;
+	background-color: #FFCCC7;
+	z-index: 2;
+	content: "";
+}
+.digit-clock li.digit:after{
+	height: 36px;
+	width: 26px;
+	border-radius: 6px;
+	position: absolute;
+	top:5px;
+	left: 0;
+	background-color: #B84C41;
+	content: "";
+	z-index: 0;
+}
+.digit-clock .digit .up{
+	height: 18px;
+	width: 26px;
+	z-index: 3;
+	position: absolute;
+	left: 0;
+	top:0;
+	color: #FF7466;
+	overflow: hidden;
+	line-height: 36px;
+}
+.digit-clock .digit .down{
+	height: 18px;
+	width: 26px;
+	z-index: 3;
+	position: absolute;
+	left: 0;
+	top:18px;
+	color: #FF7466;
+	overflow: hidden;
+	line-height: 0px;
+}
+.digit-clock .animate-box{
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 36px;
+	width: 26px;
+	z-index: 4;
+}
+
+.digit-clock .animate-box .animate-top{
+	-webkit-transform: perspective(50px) rotateX(0deg) rotateY(0deg);
+	-moz-transform: perspective(50px) rotateX(0deg) rotateY(0deg);
+	-o-transform: perspective(50px) rotateX(0deg) rotateY(0deg);
+	-ms-transform: perspective(50px) rotateX(0deg) rotateY(0deg);
+	transform: perspective(50px) rotateX(0deg) rotateY(0deg);
+	background-color: #fff;
+	height: 17px;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+	
+}
+
+.digit-clock .animate-box .animate-top.done{
+	-webkit-transform: perspective(50px) rotateX(-90deg) rotateY(0deg);
+	-moz-transform: perspective(50px) rotateX(-90deg) rotateY(0deg);
+	-o-transform: perspective(50px) rotateX(-90deg) rotateY(0deg);
+	-ms-transform: perspective(50px) rotateX(-90deg) rotateY(0deg);
+	transform: perspective(50px) rotateX(-90deg) rotateY(0deg);
+	-webkit-transition: 0.25s;
+	-moz-transition: 0.25s;
+	-o-transition: 0.25s;
+	transition: 0.25s;
+	transform-origin:50% 18px;
+	-ms-transform-origin:50% 18px; 
+	-webkit-transform-origin:50% 18px; /* Safari 和 Chrome */
+	-moz-transform-origin:50% 18px; /* Firefox */
+	-o-transform-origin:50% 18px; /* Opera */
+}
+
+.digit-clock .animate-box .animate-down{
+	-webkit-transform: perspective(50px) rotateX(90deg) rotateY(0deg);
+	-moz-transform: perspective(50px) rotateX(90deg) rotateY(0deg);
+	-o-transform: perspective(50px) rotateX(90deg) rotateY(0deg);
+	-ms-transform: perspective(50px) rotateX(90deg) rotateY(0deg);
+	transform: perspective(50px) rotateX(90deg) rotateY(0deg);
+	background-color: #fff;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+	height: 18px;
+	top:18px;
+	transform-origin:50% 0;
+	-ms-transform-origin:50% 0; 
+	-webkit-transform-origin:50% 0; /* Safari 和 Chrome */
+	-moz-transform-origin:50% 0; /* Firefox */
+	-o-transform-origin:50% 0; /* Opera */
+	
+
+}
+
+.digit-clock .animate-box .animate-down.done{
+	-webkit-transform: perspective(50px) rotateX(0deg) rotateY(0deg);
+	-moz-transform: perspective(50px) rotateX(0deg) rotateY(0deg);
+	-o-transform: perspective(50px) rotateX(0deg) rotateY(0deg);
+	-ms-transform: perspective(50px) rotateX(0deg) rotateY(0deg);
+	transform: perspective(50px) rotateX(0deg) rotateY(0deg);
+	-webkit-transition: 0.25s;
+	-moz-transition: 0.25s;
+	-o-transition: 0.25s;
+	transition: 0.25s;
+	-webkit-transition-delay: 0.25s;
+	-moz-transition-delay: 0.25s;
+	-o-transition-delay: 0.25s;
+	transition-delay: 0.25s;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
