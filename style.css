@@ -65,6 +65,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder { color:#9ea3ab !imp
 	height: 150px;
 	background-color: #ff7466;
 	color: #fff;
+	position: relative;
 }
 .digit-clock h4{
 	font-size: 20px;
@@ -79,6 +80,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder { color:#9ea3ab !imp
 	width: 198px;
 	margin: 0px auto;
 	position: relative;
+	z-index: 4;
 }
 .digit-clock .date .text{
 	position: absolute;
@@ -119,8 +121,8 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder { color:#9ea3ab !imp
 .digit-clock li.digit{
 	position: relative;
 	height: 36px;
-	margin-right: 5px;
 	width: 26px;
+	margin-right: 5px;
 	font-size: 30px;
 	text-align: center;
 }
@@ -136,13 +138,14 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder { color:#9ea3ab !imp
 }
 .digit-clock li.digit:before{
 	position: absolute;
-	top:17px;
+	top: 18px;
 	left: 1px;
 	width: 24px;
 	height: 1px;
 	background-color: #FFCCC7;
 	z-index: 2;
 	content: "";
+
 }
 .digit-clock li.digit:after{
 	height: 36px;
@@ -165,6 +168,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder { color:#9ea3ab !imp
 	color: #FF7466;
 	overflow: hidden;
 	line-height: 36px;
+	
 }
 .digit-clock .digit .down{
 	height: 18px;
@@ -172,10 +176,11 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder { color:#9ea3ab !imp
 	z-index: 3;
 	position: absolute;
 	left: 0;
-	top:18px;
+	top: 18px;
 	color: #FF7466;
 	overflow: hidden;
 	line-height: 0px;
+	
 }
 .digit-clock .animate-box{
 	position: absolute;
@@ -183,65 +188,69 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder { color:#9ea3ab !imp
 	top: 0;
 	height: 36px;
 	width: 26px;
-	z-index: 4;
+	z-index: 7;
 }
 
 .digit-clock .animate-box .animate-top{
-	-webkit-transform: perspective(50px) rotateX(0deg) rotateY(0deg);
-	-moz-transform: perspective(50px) rotateX(0deg) rotateY(0deg);
-	-o-transform: perspective(50px) rotateX(0deg) rotateY(0deg);
-	-ms-transform: perspective(50px) rotateX(0deg) rotateY(0deg);
-	transform: perspective(50px) rotateX(0deg) rotateY(0deg);
+	-webkit-transform: perspective(45px) rotateX(0deg) rotateY(0deg);
+	-moz-transform: perspective(45px) rotateX(0deg) rotateY(0deg);
+	-o-transform: perspective(45px) rotateX(0deg) rotateY(0deg);
+	-ms-transform: perspective(45px) rotateX(0deg) rotateY(0deg);
+	transform: perspective(45px) rotateX(0deg) rotateY(0deg);
 	background-color: #fff;
-	height: 17px;
 	border-top-left-radius: 6px;
 	border-top-right-radius: 6px;
-	
+	transform-origin:center bottom;
+	-ms-transform-origin:center bottom; 
+	-webkit-transform-origin:center bottom; /* Safari 和 Chrome */
+	-moz-transform-origin:center bottom; /* Firefox */
+	-o-transform-origin:center bottom; /* Opera */
+
 }
 
 .digit-clock .animate-box .animate-top.done{
-	-webkit-transform: perspective(50px) rotateX(-90deg) rotateY(0deg);
-	-moz-transform: perspective(50px) rotateX(-90deg) rotateY(0deg);
-	-o-transform: perspective(50px) rotateX(-90deg) rotateY(0deg);
-	-ms-transform: perspective(50px) rotateX(-90deg) rotateY(0deg);
-	transform: perspective(50px) rotateX(-90deg) rotateY(0deg);
+	-webkit-transform: perspective(45px) rotateX(-90deg) rotateY(0deg);
+	-moz-transform: perspective(45px) rotateX(-90deg) rotateY(0deg);
+	-o-transform: perspective(45px) rotateX(-90deg) rotateY(0deg);
+	-ms-transform: perspective(45px) rotateX(-90deg) rotateY(0deg);
+	transform: perspective(45px) rotateX(-90deg) rotateY(0deg);
 	-webkit-transition: 0.25s;
 	-moz-transition: 0.25s;
 	-o-transition: 0.25s;
 	transition: 0.25s;
-	transform-origin:50% 18px;
-	-ms-transform-origin:50% 18px; 
-	-webkit-transform-origin:50% 18px; /* Safari 和 Chrome */
-	-moz-transform-origin:50% 18px; /* Firefox */
-	-o-transform-origin:50% 18px; /* Opera */
 }
 
 .digit-clock .animate-box .animate-down{
-	-webkit-transform: perspective(50px) rotateX(90deg) rotateY(0deg);
-	-moz-transform: perspective(50px) rotateX(90deg) rotateY(0deg);
-	-o-transform: perspective(50px) rotateX(90deg) rotateY(0deg);
-	-ms-transform: perspective(50px) rotateX(90deg) rotateY(0deg);
-	transform: perspective(50px) rotateX(90deg) rotateY(0deg);
+	-webkit-transform: perspective(45px) rotateX(90deg) rotateY(0deg);
+	-moz-transform: perspective(45px) rotateX(90deg) rotateY(0deg);
+	-o-transform: perspective(45px) rotateX(90deg) rotateY(0deg);
+	-ms-transform: perspective(45px) rotateX(90deg) rotateY(0deg);
+	transform: perspective(45px) rotateX(90deg) rotateY(0deg);
+	transform-origin:50% 0px;
+	-ms-transform-origin:50% 0px; 
+	-webkit-transform-origin:50% 0px; /* Safari 和 Chrome */
+	-moz-transform-origin:50% 0px; /* Firefox */
+	-o-transform-origin:50% 0px; /* Opera */
+}
+.digit-clock .animate-box .animate-down:before{
+	height: 17px;
+	width: 26px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
 	background-color: #fff;
 	border-bottom-left-radius: 6px;
 	border-bottom-right-radius: 6px;
-	height: 18px;
-	top:18px;
-	transform-origin:50% 0;
-	-ms-transform-origin:50% 0; 
-	-webkit-transform-origin:50% 0; /* Safari 和 Chrome */
-	-moz-transform-origin:50% 0; /* Firefox */
-	-o-transform-origin:50% 0; /* Opera */
-	
-
+	content: "";
+	z-index: -1;
+	border-top: solid 1px #FFCCC7;
 }
-
 .digit-clock .animate-box .animate-down.done{
-	-webkit-transform: perspective(50px) rotateX(0deg) rotateY(0deg);
-	-moz-transform: perspective(50px) rotateX(0deg) rotateY(0deg);
-	-o-transform: perspective(50px) rotateX(0deg) rotateY(0deg);
-	-ms-transform: perspective(50px) rotateX(0deg) rotateY(0deg);
-	transform: perspective(50px) rotateX(0deg) rotateY(0deg);
+	-webkit-transform: perspective(45px) rotateX(0deg) rotateY(0deg);
+	-moz-transform: perspective(45px) rotateX(0deg) rotateY(0deg);
+	-o-transform: perspective(45px) rotateX(0deg) rotateY(0deg);
+	-ms-transform: perspective(45px) rotateX(0deg) rotateY(0deg);
+	transform: perspective(45px) rotateX(0deg) rotateY(0deg);
 	-webkit-transition: 0.25s;
 	-moz-transition: 0.25s;
 	-o-transition: 0.25s;

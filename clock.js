@@ -158,7 +158,7 @@
 						}
 					])
 				},
-				300
+				520
 			)
 		},
 		checkPrevious: function(curIndex){
@@ -173,16 +173,23 @@
 		countClock: function(curIndex){
 			var me = this;
 			if(me.checkPrevious(5)){
+
 				//取得秒的个位，计算一下个值
 				var value = me.getNumber(me['digit' + curIndex].get(0), 0, '.up');
 				if(value<=0){
-					me.setClockItem(curIndex, 9);
-					me.countClock(--curIndex);
-					
+					switch(curIndex){
+						case 0: return;
+						case 1:
+						case 3:
+						case 5: me.setClockItem(curIndex, 9);me.countClock(--curIndex);break;
+						case 2:
+						case 4: me.setClockItem(curIndex, 5);me.countClock(--curIndex);break;
+					}
 				}else{
 					var newValue = --value;
 					me.setClockItem(curIndex, newValue);
 				}
+
 			}else{
 				clearInterval(me.runtimer);
 			}
