@@ -94,6 +94,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder { color:#9ea3ab !imp
 .digit-clock li{
 	height: 36px;
 	float: left;
+	
 }
 .digit-clock li.separator{
 	width: 4px;

@@ -163,11 +163,12 @@
 		},
 		checkPrevious: function(curIndex){
 			var me = this;
-			while(curIndex--){
+			while(curIndex){
 				var value = me.getNumber(me['digit' + curIndex].get(0), 0, '.up');
 				if(value > 0){
 					return true;
 				}
+				curIndex--;
 			}
 		},
 		countClock: function(curIndex){
