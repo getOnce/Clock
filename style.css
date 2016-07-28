@@ -184,9 +184,6 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder { color:#9ea3ab !imp
 	
 }
 .digit-clock .animate-box{
-	position: absolute;
-	left: 0;
-	top: 0;
 	height: 36px;
 	width: 26px;
 	z-index: 7;
